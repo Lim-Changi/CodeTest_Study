@@ -50,15 +50,13 @@ function solution(bandage, health, attacks) {
         if (timeDamage > 0) {
             currentHealth -= timeDamage;
             contiHealCount = 0;
-            console.log(currentHealth)
             continue;
         }
         
         const bonusHealMount = contiHealCheck(timeDamage);
         currentHealth = heal(currentHealth, timeHeal + bonusHealMount, health)
-        console.log(currentHealth)
     }
-    if(answer == 0) {
+    if (answer == 0) {
         answer = currentHealth;
     }
     
